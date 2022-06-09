@@ -1,11 +1,9 @@
 module Hangman
   module Dictionary
-    WORDS = %w{
-      banana avocado apple chocolate froyo peanut
-    }
+    WORDS = (IO.read("../../words.txt")).split(nil)
 
     def self.random
       WORDS.sample
-    end
+    end   
   end
 end
