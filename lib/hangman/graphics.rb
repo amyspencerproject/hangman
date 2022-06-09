@@ -18,6 +18,16 @@ HANG
   /   \\
 WIN
 
+    CHEER = <<LEFT
+
+    🤖 Robots Dancing 🤖
+LEFT
+ALIVE2 = <<MID
+
+  (•_•)
+  <)  )╯
+  /   \\
+MID
 
     OBFUSCATION_CHAR = "👾"
 

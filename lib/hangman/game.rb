@@ -14,6 +14,13 @@ module Hangman
       Graphics.clear_screen
       puts 'Guess this word: ' + Graphics.obfuscate_word(word, '')
       puts word
+
+       if Signal.trap("SIGINT") {
+            Graphics.clear_screen
+            puts "GoodBye Cruel World!"
+            exit(true)
+          }
+        end
       
       while true
         print "[#{chances - wrong_tries} chances left]: "
@@ -38,11 +45,15 @@ module Hangman
           end
 
           unless placeholder.include? Graphics::OBFUSCATION_CHAR
-            puts Graphics::ALIVE1
+            puts Graphics::ALIVE
+            sleep(1)
+            Graphics.clear_screen
+            puts Graphics::CHEER
+            sleep(1)
             Graphics.clear_screen
             puts Graphics::ALIVE2
+            sleep(1)
             Graphics.clear_screen
-            puts Graphics::ALIVE3
             puts "\n\nWELL DONE!! YOU SURVIVED"
             break
           end
