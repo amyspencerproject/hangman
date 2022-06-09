@@ -13,6 +13,7 @@ module Hangman
     def play
       Graphics.clear_screen
       puts 'Guess this word: ' + Graphics.obfuscate_word(word, '')
+      puts word
       
       while true
         print "[#{chances - wrong_tries} chances left]: "
@@ -37,7 +38,11 @@ module Hangman
           end
 
           unless placeholder.include? Graphics::OBFUSCATION_CHAR
-            puts Graphics::ALIVE
+            puts Graphics::ALIVE1
+            Graphics.clear_screen
+            puts Graphics::ALIVE2
+            Graphics.clear_screen
+            puts Graphics::ALIVE3
             puts "\n\nWELL DONE!! YOU SURVIVED"
             break
           end

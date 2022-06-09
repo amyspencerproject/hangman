@@ -18,6 +18,7 @@ HANG
   /   \\
 WIN
 
+
     OBFUSCATION_CHAR = "👾"
 
     def self.clear_screen
